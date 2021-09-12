@@ -10,7 +10,7 @@ import { PaymentService } from 'src/app/services/payment.service';
 })
 export class PagePaymentComponent implements OnInit {
   public code: string = '';
-  public paymentAmmountInput: string = '';
+  public paymentAmountInput: string = '';
   public paymentNameInput: string = '';
   public dummyPayments: any = [];
 
@@ -31,12 +31,12 @@ export class PagePaymentComponent implements OnInit {
 
   public addPayment(): void {
     let newPayment = new Payment();
-    newPayment.paymentAmmount = parseInt(this.paymentAmmountInput);
+    newPayment.paymentAmount = parseInt(this.paymentAmountInput);
     newPayment.paymentCode = this.code;
     newPayment.paymentName = this.paymentNameInput;
 
     this._paymentService.savePayment(newPayment);
-    this.paymentAmmountInput = "";
+    this.paymentAmountInput = "";
     this.paymentNameInput= "";
   }
 
