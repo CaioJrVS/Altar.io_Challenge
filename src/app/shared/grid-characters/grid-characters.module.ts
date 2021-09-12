@@ -4,7 +4,7 @@ import { GridCharactersComponent } from './grid-characters.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule
   ],
   declarations: [GridCharactersComponent],
   exports: [GridCharactersComponent]

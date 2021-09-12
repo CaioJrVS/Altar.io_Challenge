@@ -1,1 +1,19 @@
-<app-grid-characters></app-grid-characters>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <div class="input-group mb-3 w-25">
+                <input type="text" maxlength="1" class="form-control" aria-label="">
+            </div>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" (click)="generate2dGrid()">Generate 2D grid</button>
+            </div>
+        </div>
+    </div>
+    <app-grid-characters [arrayOfCharacters]="generatedCharacters" [code]="generatedCode"></app-grid-characters>
+</div>
