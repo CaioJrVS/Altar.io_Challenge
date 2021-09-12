@@ -1,9 +1,49 @@
-<div class="mt-3 border d-flex flex-column justify-content-center w-25 align-items-center m-auto">
-  <div>
-    <p>Your code is:</p>
-  </div>
-  <div>
-    <p>{{code}}</p>
+<div class="container-fluid">
+  <div class="mt-3 mb-4 border d-flex flex-column justify-content-center w-25 align-items-center m-auto">
+    <div>
+      <p>Your code is:</p>
+    </div>
+    <div>
+      <p>{{code}}</p>
+    </div>
   </div>
 </div>
-<app-payment-grid></app-payment-grid>
+<div class="container">
+  <div class="p-2 mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm d-flex flex-row">
+          <div class="md-w-100 w-75">
+            <p>payment</p>
+            <input type="text" [(ngModel)]="paymentNameInput" class="form-control" placeholder="payment" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="col-sm">
+          <p>ammount</p>
+          <div class="md-w-100 w-75">
+            <input type="text" [(ngModel)]="paymentAmmountInput" class="form-control" placeholder="ammount" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="col-sm d-flex align-items-end sm-p-2">
+          <div class="sm-p-2">
+            <button type="button" class="btn btn-primary" (click)="addPayment()">ADD +</button>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="p-1">
+      <p>payment grid</p>
+    </div>
+    <app-payment-grid></app-payment-grid>
+  </div>
+</div>
